@@ -1,12 +1,16 @@
 import java.util.HashSet;
 
 public class WordSplitter {
-    public static void main(String[] args) throws FileNotFoundException {
-        Scanner file = new Scanner(new File("./words.txt"));
-        System.out.println(file.next());
-        // Consider using the following if you haven't done Trie.java yet:
-        // HashSet<String> dictionary;
+    public static void main(String[] args) throws Exception {
 
-        // your implementation goes here
+        if (args.length != 2) {
+            throw new Exception("Args formatted incorrectly. Please use `WordSplitter [dictionary file] [string]`");
+        }
+
+        Trie t = new Trie();
+        t.insertDictionary(args[0]);
+
+
+
     }
 }
