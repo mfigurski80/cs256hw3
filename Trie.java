@@ -25,6 +25,8 @@ public class Trie {
         public boolean contains(String s) {
             if (s.length() <= 0 && charMap.containsKey('\0'))
                 return true;
+            if (s.length() <= 0)
+                return false;
             if (charMap.containsKey(s.charAt(0)))
                 return charMap.get(s.charAt(0)).contains(s.substring(1, s.length()));
             return false;
@@ -44,6 +46,7 @@ public class Trie {
             return ret;
        }
     }
+
     public TrieNode root = new TrieNode();
     public void insert(String s){
         root.insert(s.toLowerCase());
@@ -81,7 +84,7 @@ public class Trie {
         // System.out.println(t.contains("hello"));
         // System.out.println(t.contains("hell"));
         // System.out.println(t.contains("hahah"));
-        
+
         System.out.println(t);
     }
 
