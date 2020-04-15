@@ -7,3 +7,5 @@ Once a valid set of splits is found, the solution propagates through the stack c
 
 #### Additional note:
 I would like to use 1 day of extension for this homework.
+
+Extra information
